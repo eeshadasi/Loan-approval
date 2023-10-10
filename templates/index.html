@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ml API</title>
+        <link href="https://fonts.googleapis.com/css?family=pacifico" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Arimo" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Hind:300" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+condensed:300" rel="stylesheet" type="text/css">
+        <link href="/static/sty.css" rel="stylesheet">
+        
+
+
+    </head>
+    <body>
+        <div class="login">
+            <h1>Loan Approval Prediction</h1>
+            <div class="center">
+            <div class="container">
+            <form action="{{ url_for('predict')}}" method="post">
+                <label for="Education">Education</label>
+                <select id="Education" name="Education">
+                  <option value="Graduate">Graduate</option>
+                  <option value="Not Graduate">Not Graduate</option>
+                </select>
+                
+                <label for="Self_Employed">Self_Employed</label>
+                <select id="Self_Employed" name="Self_Employed">
+                    <option value="Yes">Yes</option>
+                    <option value="No">No	</option>
+                </select>
+
+                <label for="Property_Area">Property_Area</label>
+                <select id="Property_Area" name="Property_Area">
+                    <option value="Urban">Urban</option>
+                    <option value="Rural">Rural</option>
+                    <option value="Rural">Semiurban</option>
+                </select>
+                <label for="Dependents">Dependents</label>
+                <input type="number" name="Dependents" placeholder="Dependents" required="required" />
+                <label for="ApplicantIncome">ApplicantIncome</label>
+                <input type="number" name="ApplicantIncome" placeholder="ApplicantIncome" required="required" />
+                <label for="CoapplicantIncome">CoapplicantIncome</label>
+                <input type="number" name="CoapplicantIncome" placeholder="CoapplicantIncome" required="required" />
+                <label for="LoanAmount">LoanAmount</label>
+                <input type="number" name="LoanAmount" placeholder="LoanAmount" required="required" />
+                <label for="Loan_Amount_Term">Loan_Amount_Term</label>
+                <input type="number" name="Loan_Amount_Term" placeholder="Loan_Amount_Term" required="required" />
+                <label for="Credit_History">Credit_History</label>
+                <input type="number" name="Credit_History" placeholder="Credit_History" required="required" />
+    
+                
+                <button type="submit" class="btn btn primary btn-block btn-large">predict</button>
+            </select>
+            </form>
+            <br>
+            <br>
+            {{ prediction_text }}
+        </div>
+            
+        </div>
+    </body>
+</html>

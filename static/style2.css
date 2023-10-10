@@ -1,0 +1,30 @@
+*{
+    margin:0%;
+    padding:0%;
+    font-family:'Lucida Sans';
+    
+}
+body{
+    background: linear-gradient(to right, #283048,#859398);
+}
+h1{
+    color:white;
+    float:left;
+    margin-top:130px;
+    margin-left:70px;
+}
+
+.container{
+    background-color: white;
+    height: 500px;
+    width:25%;
+    padding: 30px;
+    float:right;
+    margin-right:50px;
+    margin-top:10%;
+}
+.form-group{
+    padding: 30px;
+    font-weight: bolder;
+}
+   
